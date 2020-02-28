@@ -27,6 +27,33 @@ body {
       border-bottom-left-radius: 80px 80px; }
       body header .head .navbar .navbar__ham {
         display: none; }
+        @media only screen and (max-width: 375px) {
+          body header .head .navbar .navbar__ham {
+            display: block;
+            position: absolute;
+            top: 8%;
+            right: 5%; } }
+      body header .head .navbar #check {
+        display: none;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        z-index: 10;
+        top: 8%;
+        right: 5%;
+        opacity: 0; }
+        body header .head .navbar #check:checked ~ .navbar__menu {
+          transform: scale(1.1);
+          flex-direction: column;
+          background-color: white;
+          margin-top: 5rem;
+          width: 70vw;
+          position: absolute;
+          right: 10%;
+          z-index: 10; }
+        @media only screen and (max-width: 375px) {
+          body header .head .navbar #check {
+            display: block; } }
       body header .head .navbar .navbar__menu {
         color: #242942;
         font-size: 14px;
@@ -35,7 +62,11 @@ body {
         font-weight: 700;
         font-family: 'Barlow Condensed';
         text-transform: uppercase;
-        display: flex; }
+        display: flex;
+        transition-duration: 0.4s; }
+        @media only screen and (max-width: 375px) {
+          body header .head .navbar .navbar__menu {
+            transform: scale(0); } }
         body header .head .navbar .navbar__menu li {
           padding: 5px 10px;
           margin-left: 15px; }
@@ -50,11 +81,17 @@ body {
             color: #a0a1ac; }
           body header .head .navbar .navbar__menu li .navbar__menu--on:hover {
             text-decoration: underline; }
+          @media only screen and (max-width: 375px) {
+            body header .head .navbar .navbar__menu li .navbar__menu--on {
+              border-top: 1px solid; } }
         body header .head .navbar .navbar__menu hr {
           width: 7px;
           height: 7px;
           background-color: #a0a1ac;
           border-radius: 6px; }
+          @media only screen and (max-width: 375px) {
+            body header .head .navbar .navbar__menu hr {
+              display: none; } }
   body section .contai {
     position: fixed;
     top: 25%;
@@ -64,27 +101,38 @@ body {
     height: auto;
     display: flex;
     flex-direction: row; }
+    @media only screen and (max-width: 375px) {
+      body section .contai {
+        flex-direction: column-reverse; } }
     body section .contai .image {
       width: 50%;
       display: block; }
       body section .contai .image img {
         padding-left: 10%; }
+        @media only screen and (max-width: 375px) {
+          body section .contai .image img {
+            width: 130vw; } }
   body section .texte {
     display: block;
     width: 50%;
     padding-left: 10%; }
+    @media only screen and (max-width: 375px) {
+      body section .texte {
+        width: 100%; } }
     body section .texte .text__titre {
       text-transform: uppercase;
-      font-size: 13px; }
+      font-size: 18px -5; }
       body section .texte .text__titre .text__titre--text {
         background-color: black;
         color: #eef3f6;
         border-radius: 10px;
         padding: 2px 5px;
-        margin-right: 10px; }
+        margin-right: 10px;
+        font-size: 14px; }
       body section .texte .text__titre .text__titre--text2 {
         color: #a0a1ac;
-        letter-spacing: 5px; }
+        letter-spacing: 5px;
+        font-size: 14px; }
     body section .texte .text__contain {
       padding-top: 20px; }
       body section .texte .text__contain .text__contain--para1 {
@@ -92,10 +140,12 @@ body {
         text-transform: uppercase;
         font-weight: 700;
         font-family: 'Barlow Condensed';
-        color: #242942; }
+        color: #242942;
+        font-size: 42px; }
       body section .texte .text__contain .text__contain--para2 {
         font-size: 28px;
-        color: #a0a1ac; }
+        color: #a0a1ac;
+        font-size: 22px; }
     body section .texte .text__button {
       text-transform: uppercase;
       padding-top: 20px;
@@ -103,7 +153,7 @@ body {
       flex-direction: row; }
       body section .texte .text__button .text__button--bot {
         text-transform: uppercase;
-        padding: 16px 64px;
+        padding: .5rem .5rem;
         background-color: #ff5c5c;
         border-radius: 10px;
         border: none;
@@ -116,7 +166,8 @@ body {
           text-decoration: none;
           color: white; }
       body section .texte .text__button p {
-        padding: 16px 64px;
+        font-family: 'Barlow Condensed';
+        padding: 1rem 1rem;
         color: #a0a1ac; }
 
 .navbar__menu {

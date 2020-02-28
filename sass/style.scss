@@ -1,3 +1,10 @@
+@mixin mobile {
+    @media only screen and(max-width: 375px){
+        @content;
+    }
+}
+
+
 $mycolored:hsl(0, 100%, 68%);
 $myVeryDarkBlue: hsl(230, 11%, 40%);
 $GrayishBlue: hsl(231, 7%, 65%);
@@ -19,6 +26,7 @@ $sizefon :18px;
         font-family: 'Barlow', ;
 
             header {
+                
                 .head {
                   
                     width: 100%;
@@ -36,8 +44,16 @@ $sizefon :18px;
                     .navbar {
                         .navbar__ham {
                             display: none;
+                            @include mobile(){
+                            display: block;
+                            position: absolute;
+                            top: 8%;
+                            right: 5%;
+                            }
+
                             
                         }
+
 
                         text-align: center;
                         float: right;
@@ -45,7 +61,34 @@ $sizefon :18px;
                         height: 50vh;
                         background-color: $LightGrayishBlu;
                         border-bottom-left-radius: 80px 80px;
+                        
+                        #check{
+                            display: none;
+                            width: 25px;
+                            height: 25px;
+                            position: absolute;
+                            z-index: 10;
+                            top: 8%;
+                            right: 5%;
+                            opacity: 0;
+                            &:checked~.navbar__menu{
+                                transform: scale(1.1);
+                                flex-direction: column;
+                                background-color: white;
+                                margin-top:5rem;
+                                width: 70vw;
+                                position: absolute;
+                                right: 10%;
+                                z-index: 10;
 
+
+                        }
+                            @include mobile(){
+                                display: block;
+                            }
+                           
+                        }
+                       
                         .navbar__menu{
 
                             color: $VeryDarkBlue;
@@ -56,13 +99,16 @@ $sizefon :18px;
                             font-family:'Barlow Condensed' ;
                             text-transform: uppercase;
                             display: flex;
-
-                           
-                            
+                            transition-duration: 0.4s;
+                            @include mobile(){
+                                transform: scale(0);
+                            }
                             li {
                                 
                                 padding: 5px 10px;
                                 margin-left:15px;
+                                
+                            
                                 
                                     i {
                                         color:$GrayishBlue;
@@ -94,6 +140,12 @@ $sizefon :18px;
                                     &:hover {
                                         text-decoration: underline;
                                     }
+                                    @include mobile(){
+                                        border-top: 1px solid ;
+
+
+
+                                    }
                                    
                                 
                                        
@@ -105,6 +157,9 @@ $sizefon :18px;
                                 height: 7px;
                                 background-color:$GrayishBlue;
                                 border-radius: 6px;
+                                @include mobile(){
+                                    display: none;
+                                }
                             }
 
                         }
@@ -122,12 +177,21 @@ $sizefon :18px;
                    height: auto;
                     display: flex;
                     flex-direction: row;
+                    @include mobile(){
+                    flex-direction: column-reverse;
+                    }
                     
                     .image {
                         width: 50%;
                         display: block;
+                        
                         img{
+                            
                             padding-left: 10%;
+                            @include mobile(){
+                            width: 130vw;
+                            
+                            }
                         } 
                     }
                             }
@@ -135,24 +199,30 @@ $sizefon :18px;
                         display: block;
                         width: 50%;
                         padding-left: 10%;
-
+                        @include mobile(){
+                            width: 100%;
+                        }
                       
                         
                         
                         .text__titre{
 
                             text-transform: uppercase;
-                            font-size: $sizefon - 5;
+                            font-size: $sizefon -5;
                             .text__titre--text {
                                 background-color: black;
                                 color:$LightGrayishBlu;
                                 border-radius: 10px;
                                 padding: 2px 5px;
                                 margin-right: 10px;
+                                font-size: 14px;
+
                             }
                             .text__titre--text2 {
                                 color:$GrayishBlue ;
                                 letter-spacing: 5px;
+                               font-size: 14px;
+
                             }
                         }
                         .text__contain{
@@ -163,10 +233,12 @@ $sizefon :18px;
                             font-weight: 700;
                             font-family:'Barlow Condensed' ;
                             color: $VeryDarkBlue;
+                            font-size: 42px;
                             }
                             .text__contain--para2 {
                                 font-size: $sizefon +10;
                                 color:$GrayishBlue ;
+                                font-size: 22px;
                             
                             }
 
@@ -182,7 +254,7 @@ $sizefon :18px;
                             .text__button--bot {
                                 
                                 text-transform: uppercase;
-                                padding: 16px 64px;
+                                padding: .5rem .5rem;
                                 background-color:$mycolored ;
                                 border-radius:  10px;
                                 border: none;
@@ -199,7 +271,8 @@ $sizefon :18px;
                                 }
                             }
                             p {
-                                padding: 16px 64px;
+                                font-family:'Barlow Condensed' ;
+                                padding: 1rem 1rem;
                                 color:$GrayishBlue ;
                                 
                             }
