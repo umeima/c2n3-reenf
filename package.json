@@ -1,0 +1,21 @@
+{
+  "name": "c2n3-reenf",
+  "version": "1.0.0",
+  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "node-sass sass/style.scss css/style.css -w",
+    "compile-sass": "node-sass sass/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umeima/c2n3-reenf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umeima/c2n3-reenf/issues"
+  },
+  "homepage": "https://github.com/umeima/c2n3-reenf#readme"
+}

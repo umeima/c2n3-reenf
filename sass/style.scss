@@ -1,0 +1,231 @@
+$mycolored:hsl(0, 100%, 68%);
+$myVeryDarkBlue: hsl(230, 11%, 40%);
+$GrayishBlue: hsl(231, 7%, 65%);
+$LightGrayishBlu :hsl(207, 33%, 95%);
+$VeryDarkBlue: hsl(230, 29%, 20%);
+$sizefon :18px;
+
+* {
+    padding: 0;
+    margin: 0;
+     
+   
+}
+
+    body {
+        width: 80%;
+        margin: 0 auto;
+        font-family: 'Barlow Condensed', ;
+        font-family: 'Barlow', ;
+
+            header {
+                .head {
+                  
+                    width: 100%;
+                    height: 60vh;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    .logo{
+                        float:left;
+                        padding-top: 40px;
+                        display: block;
+                        padding-left: 10%;
+                    
+                    } 
+                    .navbar {
+                        .navbar__ham {
+                            display: none;
+                            
+                        }
+
+                        text-align: center;
+                        float: right;
+                        width: 45%;
+                        height: 50vh;
+                        background-color: $LightGrayishBlu;
+                        border-bottom-left-radius: 80px 80px;
+
+                        .navbar__menu{
+
+                            color: $VeryDarkBlue;
+                            font-size: $sizefon - 4;
+                            list-style-type: none;
+                            padding-top: 40px;
+                            font-weight: 700;
+                            font-family:'Barlow Condensed' ;
+                            text-transform: uppercase;
+                            display: flex;
+
+                           
+                            
+                            li {
+                                
+                                padding: 5px 10px;
+                                margin-left:15px;
+                                
+                                    i {
+                                        color:$GrayishBlue;
+                                        font-size: 10px;
+                                    }
+                                        
+                                
+                                a {
+                                    text-decoration:none ;
+                                   
+                                        
+
+                                   
+                                        
+    
+                                    
+
+                                }
+                                #color1{
+                                    color: $VeryDarkBlue; 
+                                }
+                                #color {
+                                            
+                                    color:$GrayishBlue;
+                                 
+                                         }
+                                .navbar__menu--on{
+                                   
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                   
+                                
+                                       
+                                }
+                                
+                            }
+                            hr {
+                                width: 7px;
+                                height: 7px;
+                                background-color:$GrayishBlue;
+                                border-radius: 6px;
+                            }
+
+                        }
+                         }
+                    }
+            }
+            section {
+                .contai{
+
+                   position: fixed;
+                   top: 25%;
+                   right: 0;
+                   left: 0;
+                   width: 100%;
+                   height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    
+                    .image {
+                        width: 50%;
+                        display: block;
+                        img{
+                            padding-left: 10%;
+                        } 
+                    }
+                            }
+                    .texte {
+                        display: block;
+                        width: 50%;
+                        padding-left: 10%;
+
+                      
+                        
+                        
+                        .text__titre{
+
+                            text-transform: uppercase;
+                            font-size: $sizefon - 5;
+                            .text__titre--text {
+                                background-color: black;
+                                color:$LightGrayishBlu;
+                                border-radius: 10px;
+                                padding: 2px 5px;
+                                margin-right: 10px;
+                            }
+                            .text__titre--text2 {
+                                color:$GrayishBlue ;
+                                letter-spacing: 5px;
+                            }
+                        }
+                        .text__contain{
+                            padding-top: 20px;
+                            .text__contain--para1{
+                            font-size:$sizefon*4 ;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            font-family:'Barlow Condensed' ;
+                            color: $VeryDarkBlue;
+                            }
+                            .text__contain--para2 {
+                                font-size: $sizefon +10;
+                                color:$GrayishBlue ;
+                            
+                            }
+
+                        }
+                        .text__button {
+                                text-transform: uppercase;
+                                padding-top: 20px;
+
+
+                                display: flex;
+                                flex-direction: row;
+                           
+                            .text__button--bot {
+                                
+                                text-transform: uppercase;
+                                padding: 16px 64px;
+                                background-color:$mycolored ;
+                                border-radius:  10px;
+                                border: none;
+                                color: white;
+                                font-family:'Barlow Condensed' ;
+                                font-weight: 700;
+                                &:hover {
+                                    background-color:hsla(0, 100%, 68%, 0.568);
+                                }
+                                & a {
+                                    text-decoration: none;
+                                    color: white;
+                                    
+                                }
+                            }
+                            p {
+                                padding: 16px 64px;
+                                color:$GrayishBlue ;
+                                
+                            }
+                           
+                        }
+
+                    }        
+                       
+                } 
+               
+            }
+
+            .navbar__menu { 
+justify-content: center;
+
+
+            }
+
+            .tit { 
+letter-spacing: 4px;
+
+
+            }
+
+
+           
+
+
+    
