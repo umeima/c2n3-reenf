@@ -41,6 +41,7 @@ $sizefon :18px;
                     
                     } 
                     .navbar {
+                       
                         .navbar__ham {
                             display: none;
                             @include mobile(){
@@ -105,20 +106,27 @@ $sizefon :18px;
                             display: flex;
                             transition-duration: 0.4s;
                             text-align: center;
-                            background-color: white;
-                            box-shadow:  0PX 3PX  8PX hsla(230, 95%, 7%, 0.287);
+                            
                            
                             
                             
                             @include mobile(){
                                 transform: scale(0);
+                                background-color: white;
+                                box-shadow:  0PX 3PX  8PX hsla(230, 95%, 7%, 0.287);
                                 
+                                
+                    
+                               
+                            }
+                           
                             }
                             li {
                                 
                                 padding: 5px 10px;
                                 margin-left:15px;
                                 margin-top: 13px;
+
                                 
                             
                                 
@@ -313,7 +321,7 @@ $sizefon :18px;
                        
                 } 
                
-            }
+            
 
             .navbar__menu { 
 justify-content: center;
