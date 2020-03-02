@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- displays site properly based on user's device -->
 
     <link
@@ -26,12 +32,54 @@
     </style>
   </head>
   <body>
-    Product Features Pricing Login New Monograph Dashboard Powerful insights
-    into your team Project planning and time tracking for agile teams Schedule a
-    demo to see a live preview
+    
+    <header>
+      <div class="head">
+        
+            <div class="logo"><img src="images/logo.svg"></div>
+            <div class="navbar">
+              <input type="checkbox" id="check">
+              <img class="navbar__ham" src="images/icon-hamburger.svg">
 
-    <footer>
-      <p class="attribution">Coded by <a href="#">Your Name Here</a>.</p>
-    </footer>
-  </body>
+              <ul class="navbar__menu">
+                  <li>Product</li>
+                  <li> Features</li>
+                  <li> Pricing </li>
+                  <li><hr> </li>
+                  <li ><a class="navbar__menu--on " id="color" href="#">Login</a> </li>     
+            </ul>
+              
+            </div> 
+
+      </div>  
+    </header>
+    <section>
+      <div class="contai">
+          
+
+              <div class="texte">
+
+                <div class="text__titre">
+                  <h1> <span class="text__titre--text">New </span>
+                    <span class="text__titre--text2">Monograph Dashboard</span> </h1>
+                </div>
+                <div class="text__contain">
+                <h2 class="text__contain--para1">Powerful insights into your team</h2>
+                <p class="text__contain--para2">Project planning and time tracking <br>for agile teams </p>
+                </div>
+               
+                <div class="text__button">
+                  <button class="text__button--bot"><a href="#">
+                  Schedule a demo </a>
+                </button>
+
+                 <p class="tit" > to see a preview </p>
+                </div>
+              </div>
+              <div class="image"><img src="images/illustration-devices.svg"></div>
+      </div>      
+
+    </section>
+
+   
 </html>
